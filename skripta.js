@@ -57,3 +57,7 @@ window.addEventListener('load', function() {
 	document.querySelector("#start").addEventListener('click', zagon);
 	
 });
+
+var izbrisiBarve = function(elementID){
+	document.getElementById(elementID).innerHTML="";
+}
