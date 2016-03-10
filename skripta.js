@@ -32,10 +32,15 @@ window.addEventListener('load', function() {
 		}		
 	}
 	
+	
 	var stop = function(event) {
 		ustavi = true;
+		var start = document.querySelector("#start");
+		start.innerHTML = "Zazeni stroboskop";
+		start.removeEventListener('click', stop);
+		start.addEventListener('click', zagon);
 	}
-	
+
 	var zagon = function(event) {
 		vrednosti = [];
 		var barve = document.querySelectorAll("#barve > button");
